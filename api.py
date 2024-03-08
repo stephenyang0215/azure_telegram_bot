@@ -10,6 +10,7 @@ def get_price(chat_id):
     json_data = {
         "chat_id": chat_id,
         "text": "Investing $"+str(protfolio)+
-        "\nBTC price(Coinbase): "+ amount
+        "\nBTC price(Coinbase): "+amount+
+        "\ngo check the trend:\nhttps://www.tradingview.com/chart/ZLu8MfRn/?symbol=NASDAQ%3ATSLA"
     }
     return json_data
