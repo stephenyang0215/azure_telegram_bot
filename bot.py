@@ -1,4 +1,5 @@
 import requests
+from keyvault import keyvault
 from api import get_price
 from bottle import (
     run, post, response, request as bottle_request
@@ -30,4 +31,6 @@ def main():
     send_message(answer_data)  # <--- function for sending answer
     return response  # status 200 OK by default
 if __name__ == '__main__':
-    run(host='localhost', port=8080, debug=True)
+    #run(host='localhost', port=8080, debug=True)
+    azure = keyvault()
+    azure.list_secret()
