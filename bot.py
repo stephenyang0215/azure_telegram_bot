@@ -31,6 +31,4 @@ def main():
     send_message(answer_data)  # <--- function for sending answer
     return response  # status 200 OK by default
 if __name__ == '__main__':
-    #run(host='localhost', port=8080, debug=True)
-    azure = keyvault()
-    azure.list_secret()
+    run(host='localhost', port=8080, debug=True)
