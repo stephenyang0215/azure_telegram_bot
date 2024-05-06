@@ -4,25 +4,25 @@ from api import get_price
 from bottle import (
     run, post, response, request as bottle_request
 )
+
 BOT_URL = 'https://api.telegram.org/bot7073361003:AAE_sZJgntP95ZI6bkgocP9pe6RGWdNsbqI/'
+
+#Receive chat id from the request.
 def get_chat_id(data):
-    """
-    Method to extract chat id from telegram request.
-    """
     chat_id = data['message']['chat']['id']
     return chat_id
+
+#Receive message id from the request.
 def get_message(data):
-    """
-    Method to extract message id from telegram request.
-    """
     message_text = data['message']['text']
     return message_text
+
+#Prepared data should be json which includes at least `chat_id` and `text`
 def send_message(prepared_data):
-    """
-    Prepared data should be json which includes at least `chat_id` and `text`
-    """
     message_url = BOT_URL + 'sendMessage'
     requests.post(message_url, json=prepared_data)
+
+#Execute the process
 @post('/')
 def main():
     data = bottle_request.json
