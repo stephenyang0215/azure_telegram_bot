@@ -5,7 +5,7 @@ from bottle import (
     run, post, response, request as bottle_request
 )
 
-BOT_URL = 'https://api.telegram.org/bot7073361003:AAE_sZJgntP95ZI6bkgocP9pe6RGWdNsbqI/'
+BOT_URL = 'your_telegram_id'
 
 #Receive chat id from the request.
 def get_chat_id(data):

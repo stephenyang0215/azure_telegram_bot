@@ -3,7 +3,7 @@ import logging
 
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
-BOT_URL = 'https://api.telegram.org/bot7073361003:AAE_sZJgntP95ZI6bkgocP9pe6RGWdNsbqI/'
+BOT_URL = 'your_telegram_id'
 def get_chat_id(data):
     """
     Method to extract chat id from telegram request.
