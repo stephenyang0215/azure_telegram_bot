@@ -1,11 +1,12 @@
 import requests
 from keyvault import keyvault
 from api import get_price
+import os
 from bottle import (
     run, post, response, request as bottle_request
 )
 
-BOT_URL = 'your_telegram_id'
+BOT_URL = os.environ["BOT_URL"]
 
 #Receive chat id from the request.
 def get_chat_id(data):

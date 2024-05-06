@@ -1,9 +1,10 @@
 import azure.functions as func
 import logging
+import os
 
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
-BOT_URL = 'your_telegram_id'
+BOT_URL = os.environ["BOT_URL"]
 def get_chat_id(data):
     """
     Method to extract chat id from telegram request.
