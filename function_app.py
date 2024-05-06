@@ -19,7 +19,6 @@ def send_message(prepared_data):
     Prepared data should be json which includes at least `chat_id` and `text`
     """
     message_url = BOT_URL + 'sendMessage'
-    #func.HttpRequest(method="POST", url=message_url, body=prepared_data)
     requests.post(message_url, json=prepared_data)
 @app.route(route="/")
 def main(req: func.HttpRequest) -> func.HttpResponse:
@@ -30,11 +29,11 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     #logging.info(f"Request Bytes: {data}")
     answer_data = get_price(get_chat_id(data))
     print("data: ", answer_data)
-    send_message(answer_data)  # <--- function for sending answer
+    send_message(answer_data)  # sending price message
     return func.HttpResponse(
         "This HTTP triggered function executed successfully.",
         status_code=200
-        )  # status 200 OK by default
+        )  
 
 @app.route(route="hello", auth_level=func.AuthLevel.ANONYMOUS)
 def test_function(req: func.HttpRequest) -> func.HttpResponse:
