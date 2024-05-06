@@ -1,5 +1,0 @@
-az role assignment create --assignee "stephenyang0215_gmail.com#EXT#@stephenyang0215gmail.onmicrosoft.com" --role "Key Vault Administrator" --scope "/subscriptions/22ca9de5-98a3-4f41-a5ab-fdf2e043f953/resourceGroups/developer"
-
-az role assignment create --assignee "joyefan800825_hotmail.com#EXT#@stephenyang0215gmail.onmicrosoft.com" --role "Key Vault Administrator" --scope "/subscriptions/22ca9de5-98a3-4f41-a5ab-fdf2e043f953/resourceGroups/developer"
-
-az keyvault secret show --vault-name "crypto-trading-bot" --name "name"
