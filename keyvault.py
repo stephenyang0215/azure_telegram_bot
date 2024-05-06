@@ -17,7 +17,7 @@ class keyvault:
         self.KVUri = f"https://{self.keyVaultName}.vault.azure.net"
         #Set up your managed identity credential
         self.credential = ManagedIdentityCredential(
-            AZURE_CLIENT_ID="b7f9cc31-ae4f-4181-9c56-59e7d5aad416"
+            AZURE_CLIENT_ID="your_azure_client_id"
             )
         #Set up your client for Key Vault service
         self.client = SecretClient(vault_url=self.KVUri, credential=self.credential)
